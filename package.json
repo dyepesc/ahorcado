@@ -1,0 +1,12 @@
+{
+  "name": "02-ahorcado",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ahorcado.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Yepes",
+  "license": "MIT",
+  "type": "module"
+}

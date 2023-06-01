@@ -1,0 +1,153 @@
+
+
+.navbar {
+    background-color: #00468b;
+    margin: 0px;
+        
+}
+.nav-container {
+    margin-top: 0px;
+    
+} 
+.nav-text {
+    color: #0ffff7;
+    font-family:Courier;
+    font-weight:bold;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0 0 0 0px;
+}
+.nav-text li {
+    margin: 0 10px;
+    margin-right: 200px;
+    margin-left: 200px;
+    font-size: 30px;
+}
+#imagen {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+}
+.container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container1 h1 {
+    font-size: 50px;
+}
+
+.cont2-text {
+    list-style: none;
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+}
+.cont2-text input {
+    background-color: #00468b;
+    color: #0ffff7;
+    margin: 0 60px;
+    width: 200px;
+    height: 35px;
+    border: none;
+    border-radius: 8px;
+    font-size: 25px;   
+}
+.cont3-text {
+    list-style: none;
+    display: flex;
+    flex-direction: row; 
+    justify-content: flex-end;
+    flex: auto;
+    margin-right: 200px; 
+}
+.cont3-text li {
+    margin: 0 30px;
+    
+}
+/*-------------------------------------------------------------------------------------------------------------
+/* Dar estilo al carrusel*/
+
+.cont3-text input {
+    width: 70px;
+    height: 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #f27398;
+    
+}
+.carrusel:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+    opacity: 0.3;
+}
+/*-------------------------------------------------------------------------------------------------------------
+/* Section 2 */
+.section2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.section2 h1 {
+    margin: 0 200px;
+    margin-top: 0px;
+    margin-bottom: 100px;
+    
+}
+/*-------------------------------------------------------------------------------------------------------------
+/* Dar estilo a las teclas*/
+.tecla {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #00468b;
+    color: #0ffff7;
+    /* background-color: #f2f2f2; */
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    font-family: serif;
+  }
+  .teclado3 {
+    margin-left: 90px;
+}
+/*-------------------------------------------------------------------------------------------------------------*/
+/* imagen del ahorcado*/
+#imagen2 {
+    width: 200px;
+    height: 300px;
+    margin-left: 200px;
+    
+}
+/*-------------------------------------------------------------------------------------------------------------*/
+/*Cuenta la cantidad de intentos*/
+.contador {
+    margin-left: 480px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #00468b;
+    color: #0ffff7;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+    font-family: serif;
+}
+/*-------------------------------------------------------------------------------------------------------------*/
+.div-container3 {
+    margin-top: 10px;
+}
+.div-container4 {
+    margin-top: 10px;
+}
+
+  
