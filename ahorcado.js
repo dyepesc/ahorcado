@@ -9,6 +9,8 @@ var ciudades = [];
 var colores = [];
 var peliculas = [];
 var aleatorio = [];
+var matrix = [];
+var filas = 0;
 //categoria = "ciudades";
 var categoria = " ";
 const btnfrutas = document.querySelector('#frutas');
@@ -72,11 +74,18 @@ function categoriapeliculas () {
 btnjugar.addEventListener("click", jugar);
 
 function jugar () {
-    //alert("escogiste " + aleatorio.length);
+    
     if (aleatorio.length == 0) {
         alert("Debes seleccionar primero una categoría ");
     } else {
         alert("escogiste " + aleatorio);
+        let palabra = document.querySelector('.tabla').insertRow(1);
+        let col1 = palabra.insertCell(0);
+        let col2 = palabra.insertCell(1);
+        let col3 = palabra.insertCell(2);
+        col1.innerHTML += aleatorio.length;
+        col2.innerHTML += aleatorio.length;
+        col3.innerHTML += aleatorio.length;
     }
     
 
