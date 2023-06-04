@@ -69,7 +69,16 @@ function categoriapeliculas () {
 //Inicio del juego - Jugar
 // al dar click en jugar, previamente se debe escoger una categoria 
 
+btnjugar.addEventListener("click", jugar);
+
 function jugar () {
+    //alert("escogiste " + aleatorio.length);
+    if (aleatorio.length == 0) {
+        alert("Debes seleccionar primero una categoría ");
+    } else {
+        alert("escogiste " + aleatorio);
+    }
+    
 
 }
 //----------------------------------------------------------------------------------------------------------//
