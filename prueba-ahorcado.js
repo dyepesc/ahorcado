@@ -67,6 +67,30 @@ switch (categoria) {
 //----------------------------------------------------------------------------------------------------------//
 //Inicio del juego
 
+//----------------------------------------------------------------------------------------------------------//
+//Imprimir las rayas de la palabra
+let word = "palabra";
+let dashes = word.replace(/[a-zA-Z]/g, "-");
+console.log(dashes);
 
+//----------------------------------------------------------------------------------------------------------//
 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Botón para ocultar H1</title>
+  </head>
+  <body>
+    <h1 id="titulo">Título</h1>
+    <button id="boton">Ocultar título</button>
 
+    <script>
+      const boton = document.getElementById("boton");
+      const titulo = document.getElementById("titulo");
+
+      boton.addEventListener("click", () => {
+        titulo.style.display = "none";
+      });
+    </script>
+  </body>
+</html>
