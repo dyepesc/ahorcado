@@ -3,6 +3,8 @@
 //----------------------------------------------------------------------------------------------------------//
 
 // Definir Variables
+var letra = "o";
+var palabra4 =" ";
 
 var frutas = [];
 var ciudades = [];
@@ -21,6 +23,7 @@ const btnpeliculas = document.querySelector('#peliculas');
 const btnjugar = document.querySelector('#jugar');
 const palabra = document.querySelector('.tabla2');
 const palabra2 = document.querySelector('.tabla');
+const palabra3 = document.querySelector('.tabla3');
 const contador = document.querySelector('.tiempo');
 //----------------------------------------------------------------------------------------------------------//
 // Definir Arrays
@@ -32,7 +35,7 @@ ciudades = ["bogota", "medellin", "cali", "lima", "pereira", "cartagena", "santa
             "armenia"];
 colores = ["rojo", "naranja", "amarillo", "verde", "azul", "morado", "rosado", "negro", "blanco", "turquesa", "cafe", "lila", "violeta", "dorado", "plateado", 
             "lavanda", "gris", "cian", "magenta"]
-peliculas = ["coco", "frozen", "moana"];
+peliculas = ["coco"];
 
 
 //----------------------------------------------------------------------------------------------------------//
@@ -86,6 +89,7 @@ function jugar () {
         palabra.innerHTML = rayas;                          // imprime las rayitas en palabra que es la tabla2 en HTML
         palabra2.style.display = "none";                    //esconde el titulo "Aqui encontraras tu palabra"
         contador.innerHTML = time();
+        comparar();
     }
     
 
@@ -103,7 +107,18 @@ function time () {
 }
 
 //----------------------------------------------------------------------------------------------------------//
-
-
+// Funcion para comparar la letra con la palabra
+function comparar() {  
+    for (let i=0; i<aleatorio.length; i++)
+    {
+        if (letra == aleatorio[i]) 
+        {
+            palabra4 += aleatorio[i]
+            palabra3.innerHTML = palabra4;
+            // alert(palabra4)     
+        }
+    }
+    alert(palabra4) 
+}
 
 
