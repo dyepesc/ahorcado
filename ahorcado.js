@@ -147,17 +147,8 @@ function jugar () {
         btntecla_w.addEventListener("click", tecla_w); 
         btntecla_x.addEventListener("click", tecla_x); 
         btntecla_y.addEventListener("click", tecla_y); 
-        btntecla_z.addEventListener("click", tecla_z); 
-        else if {
-            
-        }
-        comparar();
-            
-        
+        btntecla_z.addEventListener("click", tecla_z);         
     }
-    
-    
-
 }
 
 
@@ -175,113 +166,112 @@ function time () {
 // Funcion para ingresar letras por teclado en pantalla
 
 function tecla_a() {
-    alert("A");
-    letra = "A";
+    letra = "a";
+    comparar();
 }
 function tecla_b() {
-    alert("B")
-    
+    letra = "b";
+    comparar();
 }
 function tecla_c() {
-    alert("C")
-    
+    letra = "c";
+    comparar();
 }  
 function tecla_d() {
-    alert("D")
-    
+    letra = "d";
+    comparar();
 }
 function tecla_e() {
-    alert("E")
-    
+    letra = "e";
+    comparar();
 }
 function tecla_f() {
-    alert("F")
-    
+    letra = "f";
+    comparar();
 }
 function tecla_g() {
-    alert("G")
-    
+    letra = "g";
+    comparar();
 }
 function tecla_h() {
-    alert("H")
-    
+    letra = "h";
+    comparar();
 }
 function tecla_i() {
-    alert("I")
-    
+    letra = "i";
+    comparar();
 }
 function tecla_j() {
-    alert("J")
-    
+    letra = "j";
+    comparar();
 }
 function tecla_k() {
-    alert("K")
-    
+    letra = "k";
+    comparar();
 }
 function tecla_l() {
-    alert("L")
-    
+    letra = "l";
+    comparar();
 }
 function tecla_m() {
-    alert("M")
-    
+    letra = "m";
+    comparar();
 }
 function tecla_n() {
-    alert("N")
-    
+    letra = "n";
+    comparar();
 }
 function tecla_ñ() {
-    alert("Ñ")
-    
+    letra = "ñ";
+    comparar();
 }
 function tecla_o() {
-    //alert("O")
     letra = "o";
-    //alert("la letra es " + letra);
+    comparar();
 }
 function tecla_p() {
-    alert("P")
-    
+    letra = "p";
+    comparar();
 }
 function tecla_q() {
-    alert("Q")
-    
+    letra = "q";
+    comparar();
 }
 function tecla_r() {
-    alert("R")
-    
+    letra = "r";
+    comparar();
 }
 function tecla_s() {
-    alert("S")
-    
+    letra = "s";
+    comparar();
 }
 function tecla_t() {
-    alert("T")
-    
+    letra = "t";
+    comparar();
 }
 function tecla_u() {
-    alert("U")
-    
+    letra = "u";
+    comparar();
 }
 function tecla_v() {
-    alert("V")
-    
+    letra = "v";
+    comparar();
 }
 function tecla_w() {
-    alert("W")
-    
+    letra = "w";
+    comparar();
 }
 function tecla_x() {
-    alert("X")
-    
+    letra = "x";
+    comparar();
 }
 function tecla_y() {
-    alert("Y")
-    
+    letra = "y";
+    comparar();
 }
 function tecla_z() {
-    alert("Z")
-    
+    letra = "z";
+    comparar();
 }
 
 //----------------------------------------------------------------------------------------------------------//
