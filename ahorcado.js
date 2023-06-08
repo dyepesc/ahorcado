@@ -288,7 +288,7 @@ function comparar() {
         }
         else 
         {
-            palabra4 += "_"
+            palabra4 += "_"        
         }
     }
     palabra.innerHTML = palabra4;
