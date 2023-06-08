@@ -110,22 +110,25 @@
 //------------------------------------------------------------------------------------------------------//
 //probar comparacion de letras vs la palabra (Con arrays)
 
-var palabra3 = "corazon";
-var letra = "o";
-var arreglo = palabra3.split("");
-let dashes = palabra3.replace(/[a-zA-Z]/g, "-");
+// var palabra3 = "corazon";
+// var letra = "o";
+// var arreglo = palabra3.split("");
+// let dashes = palabra3.replace(/[a-zA-Z]/g, "-");
 
 
-for(var i=0; i<arreglo.length; i++)
-{
+// for(var i=0; i<arreglo.length; i++)
+// {
 	
-		if(letra == arreglo[i]) {
-            console.log(arreglo[i].split());
+// 		if(letra == arreglo[i]) {
+//             console.log(arreglo[i].split());
 	
-        }
-}
+//         }
+//         else {
 
-console.log(dashes)
+//         }
+// }
+
+// console.log(dashes)
 
 //------------------------------------------------------------------------------------------------------//
 
@@ -157,3 +160,30 @@ console.log(dashes)
 // } else {
 //   console.log("Ganaste");
 // }
+
+//------------------------------------------------------------------------------------------------------//
+
+// funcion teclado
+
+// var btnteclado = "B";
+
+// function teclado() {
+//     switch (btnteclado)
+//     {
+//         case ('A'):
+//             console.log("pulsaste A");
+//             break;
+//         case ('B'):
+//             console.log("pulsaste B");
+//             break;
+//     }
+// }
+
+// teclado("A");
+
+//----------------------------------------------------------------------------------------------
+// prueba teclado por teclado
+document.addEventListener('boton', (event) => {
+    alert(`Tecla presionada: ${event.key}`);
+    alert(typeof(keydown));
+  });
