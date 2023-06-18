@@ -5,6 +5,8 @@
 // Definir Variables
 var letra = " ";
 var palabra4 =" ";
+var nuevapalabra = [];
+var rayas = "";
 
 var frutas = [];
 var ciudades = [];
@@ -117,7 +119,7 @@ function jugar () {
     if (aleatorio.length != 0) {
     
         //alert("escogiste " + aleatorio);
-        let rayas = aleatorio.replace(/[a-zA-Z]/g, "-");    //reemplaza la palabra por rayitas
+        rayas = aleatorio.replace(/[a-zA-Z]/g, "-");    //reemplaza la palabra por rayitas
         palabra.innerHTML = rayas;                          // imprime las rayitas en palabra que es la tabla2 en HTML
         palabra2.style.display = "none";                    //esconde el titulo "Aqui encontraras tu palabra"
         contador.innerHTML = time();
@@ -277,21 +279,33 @@ function tecla_z() {
 //----------------------------------------------------------------------------------------------------------//
 // Funcion para comparar la letra con la palabra
 function comparar() {  
-    
-    for (let i=0; i<aleatorio.length; i++)
+    //rayas = aleatorio.replace(/[a-zA-Z]/g, "-"); 
+    //palabra.innerHTML = rayas; 
+    palabra4 = rayas.split('');
+    var nuevapalabra2 = [];
+    //palabra4 = [];
+    nuevapalabra = aleatorio.split('');
+    //alert(palabra4) 
+
+    for (let i=0; i<nuevapalabra.length; i++)
     {
         //alert("la letra es " + letra);
-        if (letra == aleatorio[i]) 
+        if (letra == nuevapalabra[i]) 
         {
-            palabra4 += aleatorio[i]
-                  
+            //palabra4 = rayas.split('');
+            //palabra4[i] = letra;
+            palabra4[i] = nuevapalabra[i];
+            
+            palabra.innerHTML = palabra4;
         }
-        else 
-        {
-            palabra4 += "_"        
-        }
+        
+        // else 
+        // {
+        //     palabra4[i] = ["_" ]  
+        //     palabra.innerHTML = palabra4;     
+        // }
     }
-    palabra.innerHTML = palabra4;
+    //palabra.innerHTML = palabra4;
     //alert(palabra4) 
 }
 

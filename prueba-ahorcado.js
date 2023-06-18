@@ -183,7 +183,64 @@
 
 //----------------------------------------------------------------------------------------------
 // prueba teclado por teclado
-document.addEventListener('boton', (event) => {
-    alert(`Tecla presionada: ${event.key}`);
-    alert(typeof(keydown));
-  });
+// document.addEventListener('boton', (event) => {
+//     alert(`Tecla presionada: ${event.key}`);
+//     alert(typeof(keydown));
+//   });
+
+//----------------------------------------------------------------------------------------------
+
+var aleatorio = "coco";
+var letra = "c";
+var palabra4 =[];
+var nuevapalabra =[];
+let rayas = aleatorio.replace(/[a-zA-Z]/g, "-");
+//console.log(rayas);
+comparar();
+
+function comparar() {  
+  palabra4 = [rayas];
+  nuevapalabra = aleatorio.split('');
+  //console.log(nuevapalabra);
+  //console.log(typeof(palabra4));
+
+  for (let i=0; i<nuevapalabra.length; i++)
+  {
+      
+      if (letra == nuevapalabra[i]) 
+      {
+          palabra4[i] = nuevapalabra[i];
+            
+      }
+      else 
+      {
+        palabra4[i] = ["_"];
+                 
+      }      
+  }
+  console.log(palabra4);
+  
+}
+
+//----------------------------------------------------------------------------------------------
+//original
+
+// function comparar() {  
+//   palabra4 = "";
+//   for (let i=0; i<aleatorio.length; i++)
+//   {
+//       //alert("la letra es " + letra);
+//       if (letra == aleatorio[i]) 
+//       {
+//           palabra4 += aleatorio[i]
+                
+//       }
+//       else 
+//       {
+//           palabra4 += "_"        
+//       }
+//   }
+//   palabra.innerHTML = palabra4;
+//   //alert(palabra4) 
+// }
+
