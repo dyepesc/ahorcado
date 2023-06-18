@@ -129,7 +129,7 @@
 }
 /*-------------------------------------------------------------------------------------------------------------*/
 /*Cuenta la cantidad de intentos*/
-.contador {
+.intentos {
     margin-left: 480px;
     display: inline-block;
     width: 50px;
@@ -139,7 +139,6 @@
     border: 1px solid #ccc;
     text-align: center;
     line-height: 50px;
-    cursor: pointer;
     font-family: serif;
 }
 /*-------------------------------------------------------------------------------------------------------------*/
