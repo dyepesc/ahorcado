@@ -3,7 +3,7 @@
 //----------------------------------------------------------------------------------------------------------//
 
 // Definir Variables
-
+var a;
 var letra = " ";
 var palabra4 = [];
 var nuevapalabra = [];
@@ -119,7 +119,8 @@ function jugar () {
         //alert("escogiste " + aleatorio);
         rayas = aleatorio.replace(/[a-zA-Z]/g, "-");    //reemplaza la palabra por rayitas
         palabra.innerHTML = rayas;                          // imprime las rayitas en palabra que es la tabla2 en HTML
-        palabra2.style.display = "none";                    //esconde el titulo "Aqui encontraras tu palabra"
+        palabra2.style.display = "none";  
+        tiempo = true;                  //esconde el titulo "Aqui encontraras tu palabra"
         contador.innerHTML = time();
         palabra4 = rayas.split('');                         //convertir en rayar y array la palabra aleatorio, esta variable se usara en la funcion comparar
         btntecla_a.addEventListener("click", tecla_a); 
@@ -156,14 +157,15 @@ function jugar () {
 // Funcion para llevar el tiempo que tarda la persona en encontrar la palabra
 
 function time () {
-    if (tiempo == true) {
-        setInterval(() => {
+   
+    if (tiempo === true) {
+        a = setInterval(function() {
             segundos++;
             contador.textContent = `${segundos} segundos`;
         }, 1000); 
-        }
-    else {
-        contador.textContent = "vuelve a empezar";
+    }
+    else if (tiempo === false) {
+        clearInterval(a);
     }
 }
 
@@ -298,6 +300,7 @@ function comparar() {
                 alert("ganaste en " + segundos + " segundos, vuelve a jugar");
                 desactivarTeclado();
                 tiempo = false;
+                time();
             }
         }
 
@@ -316,9 +319,10 @@ function intentos() {
     contador3--;
     contador2.innerHTML = contador3;
     if ( contador3 == 0) {
-        alert("perdiste, tienes que volver a empezar");
+        alert("Perdiste, la palabra es " + aleatorio + ". Tienes que volver a empezar!!!");
         desactivarTeclado();
         tiempo = false;
+        time();
     }
 }
 
@@ -353,11 +357,8 @@ function desactivarTeclado() {
     btntecla_x.disabled = true;
     btntecla_y.disabled = true;
     btntecla_z.disabled = true;
+    btnjugar.disabled   = true;
 }
 
 //----------------------------------------------------------------------------------------------------------//
-// Funcion desactivar tiempo cuando ganas o pierdes
-
-
-
 
