@@ -130,8 +130,7 @@ function categoriapeliculas () {
 }
 
 //----------------------------------------------------------------------------------------------------------//
-
- //Funciones 
+//Funciones 
 //Inicio del juego - Jugar
 // al dar click en jugar, previamente se debe escoger una categoria 
 
@@ -145,10 +144,12 @@ function jugar () {
     if (aleatorio.length != 0) {
     
         //alert("escogiste " + aleatorio);
-        let rayas = aleatorio.replace(/[a-zA-Z]/g, "-");    //reemplaza la palabra por rayitas
+        rayas = aleatorio.replace(/[a-zA-Z]/g, "-");    //reemplaza la palabra por rayitas
         palabra.innerHTML = rayas;                          // imprime las rayitas en palabra que es la tabla2 en HTML
-        palabra2.style.display = "none";                    //esconde el titulo "Aqui encontraras tu palabra"
+        palabra2.style.display = "none";  
+        tiempo = true;                  //esconde el titulo "Aqui encontraras tu palabra"
         contador.innerHTML = time();
+        palabra4 = rayas.split('');                         //convertir en rayar y array la palabra aleatorio, esta variable se usara en la funcion comparar
         btntecla_a.addEventListener("click", tecla_a); 
         btntecla_b.addEventListener("click", tecla_b); 
         btntecla_c.addEventListener("click", tecla_c); 
@@ -179,15 +180,20 @@ function jugar () {
     }
 }
 
-
 //----------------------------------------------------------------------------------------------------------//
 // Funcion para llevar el tiempo que tarda la persona en encontrar la palabra
 
 function time () {
-    setInterval(() => {
-        segundos++;
-        contador.textContent = `${segundos} segundos`;
-      }, 1000); 
+   
+    if (tiempo === true) {
+        a = setInterval(function() {
+            segundos++;
+            contador.textContent = `${segundos} segundos`;
+        }, 1000); 
+    }
+    else if (tiempo === false) {
+        clearInterval(a);
+    }
 }
 
 //----------------------------------------------------------------------------------------------------------//
@@ -304,6 +310,7 @@ function tecla_z() {
 
 //----------------------------------------------------------------------------------------------------------//
 // Funcion para comparar la letra con la palabra
+
 function comparar() {  
    
     nuevapalabra = aleatorio.split('');
