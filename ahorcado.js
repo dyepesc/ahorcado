@@ -83,22 +83,50 @@ btnciudades.addEventListener("click", categoriaciudades);
 
 function categoriafrutas () {
     aleatorio = frutas[Math.floor(Math.random() * frutas.length)];
-    //alert(aleatorio);
+    btnfrutas.style.backgroundColor= '#f27398';
+    btnfrutas.style.color= 'black';
+    btnciudades.style.backgroundColor= '#00468b';
+    btnciudades.style.color= '#0ffff7';
+    btncolores.style.backgroundColor= '#00468b';
+    btncolores.style.color= '#0ffff7';
+    btnpeliculas.style.backgroundColor= '#00468b';
+    btnpeliculas.style.color= '#0ffff7';
 }
 
 function categoriaciudades () {
     aleatorio = ciudades[Math.floor(Math.random() * ciudades.length)];
-    //alert(aleatorio);
+    btnciudades.style.backgroundColor= '#f27398';
+    btnciudades.style.color= 'black';
+    btnfrutas.style.backgroundColor= '#00468b';
+    btnfrutas.style.color= '#0ffff7';
+    btncolores.style.backgroundColor= '#00468b';
+    btncolores.style.color= '#0ffff7';
+    btnpeliculas.style.backgroundColor= '#00468b';
+    btnpeliculas.style.color= '#0ffff7';
 }
 
 function categoriacolores () {
     aleatorio = colores[Math.floor(Math.random() * colores.length)];
-    //alert(aleatorio);
+    btncolores.style.backgroundColor= '#f27398';
+    btncolores.style.color= 'black';
+    btnfrutas.style.backgroundColor= '#00468b';
+    btnfrutas.style.color= '#0ffff7';
+    btnciudades.style.backgroundColor= '#00468b';
+    btnciudades.style.color= '#0ffff7';
+    btnpeliculas.style.backgroundColor= '#00468b';
+    btnpeliculas.style.color= '#0ffff7';
 }
 
 function categoriapeliculas () {
     aleatorio = peliculas[Math.floor(Math.random() * peliculas.length)];
-    //alert(aleatorio);
+    btnpeliculas.style.backgroundColor= '#f27398';
+    btnpeliculas.style.color= 'black';
+    btnfrutas.style.backgroundColor= '#00468b';
+    btnfrutas.style.color= '#0ffff7';
+    btncolores.style.backgroundColor= '#00468b';
+    btncolores.style.color= '#0ffff7';
+    btnciudades.style.backgroundColor= '#00468b';
+    btnciudades.style.color= '#0ffff7';
 }
 
 //----------------------------------------------------------------------------------------------------------//
