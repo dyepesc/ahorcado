@@ -28,6 +28,7 @@ const btnjugar = document.querySelector('#jugar');
 const palabra = document.querySelector('.tabla2');
 const palabra2 = document.querySelector('.tabla');
 const palabra3 = document.querySelector('.tabla3');
+const palabra5 = document.querySelector('.tabla4');
 const contador = document.querySelector('.tiempo');
 const btntecla_a =  document.querySelector('#A');
 const btntecla_b =  document.querySelector('#B');
@@ -56,6 +57,7 @@ const btntecla_w =  document.querySelector('#W');
 const btntecla_x =  document.querySelector('#X');
 const btntecla_y =  document.querySelector('#Y');
 const btntecla_z =  document.querySelector('#Z');
+const imagen2 = document.querySelector('#imagen2');
 
 //----------------------------------------------------------------------------------------------------------//
 // Definir Arrays
@@ -84,26 +86,50 @@ btnciudades.addEventListener("click", categoriaciudades);
 
 function categoriafrutas () {
     aleatorio = frutas[Math.floor(Math.random() * frutas.length)];
-    //btnfrutas.style.backgroundColor= '#f27398';
-    //alert(aleatorio);
+    btnfrutas.style.backgroundColor= '#f27398';
+    btnfrutas.style.color= 'black';
+    btnciudades.style.backgroundColor= '#00468b';
+    btnciudades.style.color= '#0ffff7';
+    btncolores.style.backgroundColor= '#00468b';
+    btncolores.style.color= '#0ffff7';
+    btnpeliculas.style.backgroundColor= '#00468b';
+    btnpeliculas.style.color= '#0ffff7';
 }
 
 function categoriaciudades () {
     aleatorio = ciudades[Math.floor(Math.random() * ciudades.length)];
-    //btnciudades.style.backgroundColor= '#f27398';
-    //alert(aleatorio);
+    btnciudades.style.backgroundColor= '#f27398';
+    btnciudades.style.color= 'black';
+    btnfrutas.style.backgroundColor= '#00468b';
+    btnfrutas.style.color= '#0ffff7';
+    btncolores.style.backgroundColor= '#00468b';
+    btncolores.style.color= '#0ffff7';
+    btnpeliculas.style.backgroundColor= '#00468b';
+    btnpeliculas.style.color= '#0ffff7';
 }
 
 function categoriacolores () {
     aleatorio = colores[Math.floor(Math.random() * colores.length)];
-    //btncolores.style.backgroundColor= '#f27398';
-    //alert(aleatorio);
+    btncolores.style.backgroundColor= '#f27398';
+    btncolores.style.color= 'black';
+    btnfrutas.style.backgroundColor= '#00468b';
+    btnfrutas.style.color= '#0ffff7';
+    btnciudades.style.backgroundColor= '#00468b';
+    btnciudades.style.color= '#0ffff7';
+    btnpeliculas.style.backgroundColor= '#00468b';
+    btnpeliculas.style.color= '#0ffff7';
 }
 
 function categoriapeliculas () {
     aleatorio = peliculas[Math.floor(Math.random() * peliculas.length)];
-    //btnpeliculas.style.backgroundColor= '#f27398';
-    //alert(aleatorio);
+    btnpeliculas.style.backgroundColor= '#f27398';
+    btnpeliculas.style.color= 'black';
+    btnfrutas.style.backgroundColor= '#00468b';
+    btnfrutas.style.color= '#0ffff7';
+    btncolores.style.backgroundColor= '#00468b';
+    btncolores.style.color= '#0ffff7';
+    btnciudades.style.backgroundColor= '#00468b';
+    btnciudades.style.color= '#0ffff7';
 }
 
 //----------------------------------------------------------------------------------------------------------//
@@ -123,7 +149,9 @@ function jugar () {
         //alert("escogiste " + aleatorio);
         rayas = aleatorio.replace(/[a-zA-Z]/g, "-");    //reemplaza la palabra por rayitas
         palabra.innerHTML = rayas;                          // imprime las rayitas en palabra que es la tabla2 en HTML
-        palabra2.style.display = "none";  
+        palabra2.style.display = "none"; 
+        palabra5.style.display = "none"; 
+        imagen2.style.display = "table";
         tiempo = true;                  //esconde el titulo "Aqui encontraras tu palabra"
         contador.innerHTML = time();
         palabra4 = rayas.split('');                         //convertir en rayar y array la palabra aleatorio, esta variable se usara en la funcion comparar
@@ -334,34 +362,38 @@ function intentos() {
 // Funcion desactivar teclado cuando ganas o pierdes
 
 function desactivarTeclado() {
-    btntecla_a.disabled = true;
-    btntecla_b.disabled = true;
-    btntecla_c.disabled = true;
-    btntecla_d.disabled = true;
-    btntecla_e.disabled = true;
-    btntecla_f.disabled = true;
-    btntecla_g.disabled = true;
-    btntecla_h.disabled = true;
-    btntecla_i.disabled = true;
-    btntecla_j.disabled = true;
-    btntecla_k.disabled = true;
-    btntecla_l.disabled = true;
-    btntecla_m.disabled = true;
-    btntecla_n.disabled = true;
-    btntecla_ñ.disabled = true;
-    btntecla_o.disabled = true;
-    btntecla_p.disabled = true;
-    btntecla_q.disabled = true;
-    btntecla_r.disabled = true;
-    btntecla_s.disabled = true;
-    btntecla_t.disabled = true;
-    btntecla_u.disabled = true;
-    btntecla_v.disabled = true;
-    btntecla_w.disabled = true;
-    btntecla_x.disabled = true;
-    btntecla_y.disabled = true;
-    btntecla_z.disabled = true;
-    btnjugar.disabled   = true;
+    btntecla_a.disabled     = true;
+    btntecla_b.disabled     = true;
+    btntecla_c.disabled     = true;
+    btntecla_d.disabled     = true;
+    btntecla_e.disabled     = true;
+    btntecla_f.disabled     = true;
+    btntecla_g.disabled     = true;
+    btntecla_h.disabled     = true;
+    btntecla_i.disabled     = true;
+    btntecla_j.disabled     = true;
+    btntecla_k.disabled     = true;
+    btntecla_l.disabled     = true;
+    btntecla_m.disabled     = true;
+    btntecla_n.disabled     = true;
+    btntecla_ñ.disabled     = true;
+    btntecla_o.disabled     = true;
+    btntecla_p.disabled     = true;
+    btntecla_q.disabled     = true;
+    btntecla_r.disabled     = true;
+    btntecla_s.disabled     = true;
+    btntecla_t.disabled     = true;
+    btntecla_u.disabled     = true;
+    btntecla_v.disabled     = true;
+    btntecla_w.disabled     = true;
+    btntecla_x.disabled     = true;
+    btntecla_y.disabled     = true;
+    btntecla_z.disabled     = true;
+    btnjugar.disabled       = true;
+    btnfrutas.disabled      = true;
+    btncolores.disabled     = true;
+    btnpeliculas.disabled   = true;
+    btnciudades.disabled    = true;
 }
 
 //----------------------------------------------------------------------------------------------------------//

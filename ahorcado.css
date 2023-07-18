@@ -1,5 +1,6 @@
 
 
+
 .navbar {
     background-color: #00468b;
     margin: 0px;
@@ -125,11 +126,11 @@
     width: 200px;
     height: 300px;
     margin-left: 200px;
-    
+    display: none;
 }
 /*-------------------------------------------------------------------------------------------------------------*/
 /*Cuenta la cantidad de intentos*/
-.contador {
+.intentos {
     margin-left: 480px;
     display: inline-block;
     width: 50px;
@@ -139,7 +140,6 @@
     border: 1px solid #ccc;
     text-align: center;
     line-height: 50px;
-    cursor: pointer;
     font-family: serif;
 }
 /*-------------------------------------------------------------------------------------------------------------*/
