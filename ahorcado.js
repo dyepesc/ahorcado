@@ -305,22 +305,80 @@ function tecla_z() {
 //----------------------------------------------------------------------------------------------------------//
 // Funcion para comparar la letra con la palabra
 function comparar() {  
-    
-    for (let i=0; i<aleatorio.length; i++)
+   
+    nuevapalabra = aleatorio.split('');
+
+    for (let i=0; i<nuevapalabra.length; i++)
     {
-        //alert("la letra es " + letra);
-        if (letra == aleatorio[i]) 
+        if (letra == nuevapalabra[i]) 
         {
-            palabra4 += aleatorio[i]
-                  
+            palabra4[i] = letra;
+            palabra.innerHTML = palabra4;
+            
+            if (JSON.stringify(palabra4) === JSON.stringify(nuevapalabra))
+            {
+                alert("ganaste en " + segundos + " segundos, vuelve a jugar");
+                desactivarTeclado();
+                tiempo = false;
+                time();
+            }
         }
-        else 
-        {
-            palabra4 += "_"        
-        }
+
+    } 
+    if (nuevapalabra.includes(letra) == false)
+    {
+        intentos(); 
     }
-    palabra.innerHTML = palabra4;
-    //alert(palabra4) 
+    
 }
 
+//----------------------------------------------------------------------------------------------------------//
+// Funcion intentos para restar el numero de oportunidades
+
+function intentos() {
+    contador3--;
+    contador2.innerHTML = contador3;
+    if ( contador3 == 0) {
+        alert("Perdiste, la palabra es " + aleatorio + ". Tienes que volver a empezar!!!");
+        desactivarTeclado();
+        tiempo = false;
+        time();
+    }
+}
+
+//----------------------------------------------------------------------------------------------------------//
+// Funcion desactivar teclado cuando ganas o pierdes
+
+function desactivarTeclado() {
+    btntecla_a.disabled = true;
+    btntecla_b.disabled = true;
+    btntecla_c.disabled = true;
+    btntecla_d.disabled = true;
+    btntecla_e.disabled = true;
+    btntecla_f.disabled = true;
+    btntecla_g.disabled = true;
+    btntecla_h.disabled = true;
+    btntecla_i.disabled = true;
+    btntecla_j.disabled = true;
+    btntecla_k.disabled = true;
+    btntecla_l.disabled = true;
+    btntecla_m.disabled = true;
+    btntecla_n.disabled = true;
+    btntecla_ñ.disabled = true;
+    btntecla_o.disabled = true;
+    btntecla_p.disabled = true;
+    btntecla_q.disabled = true;
+    btntecla_r.disabled = true;
+    btntecla_s.disabled = true;
+    btntecla_t.disabled = true;
+    btntecla_u.disabled = true;
+    btntecla_v.disabled = true;
+    btntecla_w.disabled = true;
+    btntecla_x.disabled = true;
+    btntecla_y.disabled = true;
+    btntecla_z.disabled = true;
+    btnjugar.disabled   = true;
+}
+
+//----------------------------------------------------------------------------------------------------------//
 
