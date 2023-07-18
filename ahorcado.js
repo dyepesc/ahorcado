@@ -3,9 +3,11 @@
 //----------------------------------------------------------------------------------------------------------//
 
 // Definir Variables
+var a;
 var letra = " ";
-var palabra4 =" ";
-
+var palabra4 = [];
+var nuevapalabra = [];
+var rayas = "";
 var frutas = [];
 var ciudades = [];
 var colores = [];
@@ -14,8 +16,10 @@ var aleatorio = [];
 var matrix = [];
 var filas = 0;
 var segundos = 0;
-//categoria = "ciudades";
 var categoria = " ";
+var contador3 = 10;
+var tiempo = true;
+const contador2 = document.querySelector('.intentos');
 const btnfrutas = document.querySelector('#frutas');
 const btnciudades = document.querySelector('#ciudades');
 const btncolores = document.querySelector('#colores');
@@ -53,11 +57,8 @@ const btntecla_x =  document.querySelector('#X');
 const btntecla_y =  document.querySelector('#Y');
 const btntecla_z =  document.querySelector('#Z');
 
-
-
 //----------------------------------------------------------------------------------------------------------//
 // Definir Arrays
-
 
 frutas = ["manzana", "pera", "banano", "frambuesa", "fresa", "mangostino", "arandano","mango", "uva", "mandarina", "naranja",
             "mora", "granadilla"];
@@ -65,8 +66,9 @@ ciudades = ["bogota", "medellin", "cali", "lima", "pereira", "cartagena", "santa
             "armenia"];
 colores = ["rojo", "naranja", "amarillo", "verde", "azul", "morado", "rosado", "negro", "blanco", "turquesa", "cafe", "lila", "violeta", "dorado", "plateado", 
             "lavanda", "gris", "cian", "magenta"]
-peliculas = ["coco"];
-
+peliculas = ["coco", "cenicienta", "blancanieves", "bambi", "frozen", "fantasia", "dumbo", "zootopia", "pinocho",
+            "danny", "tron", "aladdin", "pocahontas", "hercules", "mulan", "tarzan", "atlantis", "los tres caballeros",
+            "cancion del sur", "tiempo de melodia", "peter pan"];
 
 //----------------------------------------------------------------------------------------------------------//
 // Seleccionar categoría
@@ -75,7 +77,6 @@ btnfrutas.addEventListener("click", categoriafrutas);
 btncolores.addEventListener("click", categoriacolores);
 btnpeliculas.addEventListener("click", categoriapeliculas);
 btnciudades.addEventListener("click", categoriaciudades);
-
 
 //----------------------------------------------------------------------------------------------------------//
 //Funciones
